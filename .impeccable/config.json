@@ -1,0 +1,98 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "sites/warm.html"
+        ],
+        "createdAt": "2026-11-18T21:24:16.085Z",
+        "reason": "Claude: static scan misreads kit spacing; .rows li have 16px block padding and full-bleed section grounds inset text by the 80px/24px .wrap gutter (checked system.css)"
+      },
+      {
+        "rule": "pulsing-dot",
+        "value": "*",
+        "files": [
+          "sites/warm.html"
+        ],
+        "createdAt": "2026-11-18T21:24:16.092Z",
+        "reason": "Claude: rule comes from linked kit CSS (layout.css float-card dot) for a component this page does not use; nothing pulses on the page"
+      },
+      {
+        "rule": "radial-halo",
+        "value": "*",
+        "files": [
+          "sites/warm.html"
+        ],
+        "createdAt": "2026-11-18T21:24:16.099Z",
+        "reason": "Claude: radial gradients are in linked kit CSS (layout.css hero-stage, cards.css panels) for components this page does not use; grounds are flat"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "sites/ember.html"
+        ],
+        "createdAt": "2026-11-18T21:24:16.107Z",
+        "reason": "Claude: static scan misreads kit spacing; .rows li have 16px block padding and full-bleed section grounds inset text by the 80px/24px .wrap gutter (checked system.css)"
+      },
+      {
+        "rule": "pulsing-dot",
+        "value": "*",
+        "files": [
+          "sites/ember.html"
+        ],
+        "createdAt": "2026-11-18T21:24:16.116Z",
+        "reason": "Claude: rule comes from linked kit CSS (layout.css float-card dot) for a component this page does not use; nothing pulses on the page"
+      },
+      {
+        "rule": "radial-halo",
+        "value": "*",
+        "files": [
+          "sites/ember.html"
+        ],
+        "createdAt": "2026-11-18T21:24:16.124Z",
+        "reason": "Claude: radial gradients are in linked kit CSS (layout.css hero-stage, cards.css panels) for components this page does not use; grounds are flat"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "sites/pulse.html"
+        ],
+        "createdAt": "2026-11-18T21:24:16.133Z",
+        "reason": "Claude: static scan misreads kit spacing; .rows li have 16px block padding and full-bleed section grounds inset text by the 80px/24px .wrap gutter (checked system.css)"
+      },
+      {
+        "rule": "pulsing-dot",
+        "value": "*",
+        "files": [
+          "sites/pulse.html"
+        ],
+        "createdAt": "2026-11-18T21:24:16.142Z",
+        "reason": "Claude: rule comes from linked kit CSS (layout.css float-card dot) for a component this page does not use; nothing pulses on the page"
+      },
+      {
+        "rule": "radial-halo",
+        "value": "*",
+        "files": [
+          "sites/pulse.html"
+        ],
+        "createdAt": "2026-11-18T21:24:16.150Z",
+        "reason": "Claude: radial gradients are in linked kit CSS (layout.css hero-stage, cards.css panels) for components this page does not use; grounds are flat"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "sites/request.html"
+        ],
+        "createdAt": "2026-11-18T21:24:16.159Z",
+        "reason": "Client brief: rootwell-website-brief.md asks for a cream or bone background (#F6F1E9 range) for the warm direction"
+      }
+    ]
+  }
+}
