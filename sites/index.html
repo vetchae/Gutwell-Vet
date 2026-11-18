@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rootwell drafts</title>
+<meta name="description" content="Three design directions for the Rootwell Veterinary website, with the consultation request flow.">
+<meta name="robots" content="noindex">
+<style>
+  :root { --bg: #f6f5f2; --ink: #1c1c1a; --muted: #5d5d58; --line: rgba(28,28,26,.14); }
+  * { box-sizing: border-box; } html, body { margin: 0; }
+  body { background: var(--bg); color: var(--ink); font: 17px/1.55 system-ui, sans-serif; }
+  main { width: min(1200px, 100% - 32px); margin: 0 auto; padding: 56px 0 80px; }
+  h1 { font-weight: 500; letter-spacing: -0.02em; font-size: clamp(28px, 3vw, 40px); margin: 0 0 8px; }
+  p { color: var(--muted); margin: 0 0 32px; max-width: 60ch; }
+  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+  @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+  a.card { display: grid; gap: 12px; color: inherit; text-decoration: none; }
+  a.card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-radius: 12px; border: 1px solid var(--line); transition: transform 200ms; }
+  a.card:hover img { transform: translateY(-2px); }
+  a.card b { font-weight: 500; font-size: 19px; }
+  a.card span { color: var(--muted); font-size: 15px; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 40px; font-size: 15px; }
+  .links a { color: inherit; min-height: 44px; display: inline-flex; align-items: center; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Rootwell: three website drafts</h1>
+  <p>Each is the same home page and consultation flow in a different look. Open one, click through it, and try "Request a consultation".</p>
+  <div class="grid">
+    <a class="card" href="warm.html"><img src="share-warm.jpg" alt="Draft A: cream page with a dog on a rug"><b>A. Warm editorial</b><span>Cream, burnt orange and botanical green. Function Health and Superpower feel.</span></a>
+    <a class="card" href="ember.html"><img src="share-ember.jpg" alt="Draft B: dark page with vegetables on a dark table"><b>B. Black and orange</b><span>Near-black with a hot orange. Pointer Health feel.</span></a>
+    <a class="card" href="pulse.html"><img src="share-pulse.jpg" alt="Draft C: dark page with a close-up of a tabby cat"><b>C. Measured, athletic</b><span>Black, white and a recovery green with large figures. Whoop feel.</span></a>
+  </div>
+  <div class="links">
+    <a href="request.html?theme=warm">Request flow: new client</a>
+    <a href="request.html?theme=ember&amp;who=existing">Request flow: existing client</a>
+    <a href="request.html?theme=pulse&amp;who=vet">Request flow: veterinarian</a>
+  </div>
+</main>
+</body>
+</html>

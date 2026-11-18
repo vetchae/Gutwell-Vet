@@ -1,0 +1,24 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&family=Hanken+Grotesk:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/backgrounds/backgrounds.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/icons/icon.css">
+<!-- <html lang="en" data-radius="soft">; keep this <style> after the links: layout.css resets --ly-scale -->
+<style>
+:root {
+  --p-bg: #f4efe6; --p-surface: #e7eadf; --p-ink: #1e2a1f; --p-muted: #61695e;
+  --p-accent: #c4501c; --p-accent-ink: #ffffff; --p-action: #c4501c; --p-action-ink: #ffffff;
+  --p-inv-bg: #1e2a1f; --p-inv-surface: #2b362b; --p-inv-ink: #f4efe6; --p-inv-muted: #9b9e93;
+  --p-inv-accent: #c4501c; --p-inv-accent-ink: #ffffff; --p-inv-action: #c4501c; --p-inv-action-ink: #ffffff;
+  --font-display: "Newsreader", Georgia, serif;
+  --font-text: "Hanken Grotesk", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.018em;
+  --display-tracking-xl: -0.025em;
+  --ly-scale: 1.06;
+}
+</style>

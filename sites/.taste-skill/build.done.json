@@ -1,0 +1,11 @@
+{
+ "page": "warm.html",
+ "url": null,
+ "root": null,
+ "kind": "service",
+ "category": "veterinary nutrition consultations",
+ "primary": "Start a consultation",
+ "rounds": 3,
+ "start": "2026-11-18T21:08:52.386Z",
+ "by": "gate.mjs --start"
+}

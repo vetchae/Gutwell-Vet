@@ -1,0 +1,563 @@
+{
+ "start": "2026-11-18T21:08:52.386Z",
+ "round": 3,
+ "idle": 0,
+ "errors": 0,
+ "status": "open",
+ "history": [
+  {
+   "at": "2026-11-18T21:11:01.233Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 10,
+   "round": 1,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-18T21:19:47.844Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 15,
+   "round": 2,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-18T21:22:09.727Z",
+   "mode": "manual",
+   "status": "open",
+   "fails": 6,
+   "round": 3,
+   "reused": false,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": "warm.html",
+  "url": null,
+  "root": null,
+  "kind": "service",
+  "category": "veterinary nutrition consultations",
+  "primary": "Start a consultation",
+  "rounds": 3,
+  "start": "2026-11-18T21:08:52.386Z",
+  "by": "gate.mjs --start"
+ },
+ "manual": true,
+ "roundKey": "18e84808c7b83b66:da39a3ee",
+ "roundFree": false,
+ "idleFree": false,
+ "blockKey": null,
+ "fp": "18e84808c7b83b66",
+ "page": "warm.html",
+ "found": {
+  "fails": [
+   {
+    "check": "no-visual",
+    "where": "section#start \"Request a consultation\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#start \"Request a consultation\""
+    ]
+   },
+   {
+    "check": "card-family",
+    "where": "section#fees > div.wrap.grid > div.span-6:nth-of-type(1) \"Consultation fees\"",
+    "msg": "8 cards of one kind (.span-6) set their titles in 2 faces: newsreader (2, like \"Consultation fees\"), hanken grotesk (2, like \"Every written plan inclu\")",
+    "fix": "draw one card part one way: one fill and one title face for every card of a kind (one featured card may differ)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "card-family"
+    ],
+    "wheres": [
+     "section#fees > div.wrap.grid > div.span-6:nth-of-type(1) \"Consultation fees\""
+    ]
+   },
+   {
+    "check": "card-layout",
+    "where": "section#fees",
+    "msg": "one layout (.frame--photo) in 3 sections: section#fees, section#vets, section#about; a card layout at most twice",
+    "fix": "a card layout at most twice on a page: build the other sections another way",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "card-layout"
+    ],
+    "wheres": [
+     "section#fees"
+    ]
+   },
+   {
+    "check": "copy-headings",
+    "where": "div.wrap > div.grid > article.tile.span-4:nth-of-type(1) > h3.t-card \"Skin and ears\"",
+    "msg": "\"Skin and ears\" names no product, part, place or section (6 headings like it; at most one brand line per page) (and 5 more like it: \"Digestion\", \"Weight and senior pets\", \"Have these ready\", \"Do I still need my regul\", ...)",
+    "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "copy-headings"
+    ],
+    "wheres": [
+     "div.wrap > div.grid > article.tile.span-4:nth-of-type(1) > h3.t-card \"Skin and ears\""
+    ]
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#fees / section#vets",
+    "msg": "462px between these sections, +121% against the median 209px of gaps at a change of ground",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-gaps"
+    ],
+    "wheres": [
+     "section#fees / section#vets"
+    ]
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#start / footer#contact",
+    "msg": "437px between these sections, +109% against the median 209px of gaps at a change of ground",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-gaps"
+    ],
+    "wheres": [
+     "section#start / footer#contact"
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "scroll-reveal",
+    "where": "section#process \"How a consultation works Four steps, fro\"",
+    "msg": "starts \"opacity\" (0.4 s) the moment it is scrolled into view (an IntersectionObserver) on div.mo-ph__words (inside a dealt moment's section, [data-moment]: an enter moment is expected on every kind; its still is judged under reduced motion)",
+    "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "pinned",
+    "where": "section#process > div.wrap.mo-ph \"How a consultation works Four steps, fro\"",
+    "msg": "held on screen for 3 screens of scroll (position: sticky) while the page moves on (inside a dealt moment's section, [data-moment]: expected on every kind, two moments at most, house rule; its still is judged under reduced motion)",
+    "fix": "let the section scroll with the page",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "no-visual",
+    "where": "section#fees \"Consultation fees\"",
+    "msg": "pictures, effects and mocks cover 17% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#process \"How a consultation works\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-actions",
+    "where": "(the page)",
+    "msg": "the main action \"Start a consultation\" does not read word for word the same in the nav or hero and the closing section",
+    "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#process / section#fees",
+    "msg": "152px between these sections, -36% against the median 237px of gaps at a change of ground",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#vets / section#about",
+    "msg": "340px between these sections, +43% against the median 237px of gaps at a change of ground",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#about / section#start",
+    "msg": "300px between these sections, +27% against the median 237px of gaps at a change of ground",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "main#top > section.hero.hero--split / section#help",
+    "msg": "uneven space at the edge of a band: 64px outside its edge, 122px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-set",
+    "where": "div.grid > article.tile.span-4:nth-of-type(3) > div.tile__media > img \"f186238348.jpg\"",
+    "msg": "11 photographs in more than one look: saturation from 0.20 to 0.67; the odd one out is f186238348.jpg",
+    "fix": "grade the photographs to one look (light, colour, warmth), or replace the odd one out",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-credit",
+    "where": "(the page text)",
+    "msg": "1 library source (wikimedia): the page credits wikimedia; confirm each shows the client's own product, place or people",
+    "fix": "confirm the library photograph shows the client's own product, place or people; otherwise replace it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "header.nav > div.wrap.nav__bar > a.nav__logo \"rootwell\"",
+    "msg": "\"rootwell\" opens a section headed \"Nutrition consults for dogs and cats, by video\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.wrap.nav__bar > nav.nav__links > div.nav__item:nth-of-type(1) > a.nav__link \"Consults\"",
+    "msg": "\"Consults\" opens a section headed \"Diet plans for skin, gut and weight. One pet, one \"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.nav__menu > div.wrap.grid > div.menu-col.span-3:nth-of-type(1) > a:nth-of-type(3) \"Home-cooked dietsBalanced recipes for on\"",
+    "msg": "\"Home-cooked dietsBalanced recipes for on\" opens a section headed \"Diet plans for skin, gut and weight. One pet, one \"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.nav__menu > div.wrap.grid > div.menu-col.span-3:nth-of-type(2) > a:nth-of-type(1) \"How it worksForm, records, video, plan\"",
+    "msg": "\"How it worksForm, records, video, plan\" opens a section headed \"How a consultation works\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.nav__menu > div.wrap.grid > div.menu-col.span-3:nth-of-type(2) > a:nth-of-type(2) \"FeesFrom $500, paid before booking\"",
+    "msg": "\"FeesFrom $500, paid before booking\" opens a section headed \"Consultation fees\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.nav__item:nth-of-type(1) > div.nav__menu > div.wrap.grid > a.menu-card.span-3 \"Referring a patient Cases, records and t\"",
+    "msg": "\"Referring a patient Cases, records and t\" opens a section headed \"Nutrition referrals for veterinarians\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.wrap.nav__bar > nav.nav__links > div.nav__item:nth-of-type(2) > a.nav__link \"Process\"",
+    "msg": "\"Process\" opens a section headed \"How a consultation works\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "div.nav__menu > div.wrap.grid > div.menu-col.span-3:nth-of-type(1) > a:nth-of-type(1) \"Skin and digestionItching, ear\"",
+    "msg": "3 entries of one menu go to the same place (#help): \"Skin and digestionItching, ear\", \"Weight and senior petsCalories\", \"Home-cooked dietsBalanced reci\"",
+    "fix": "give each menu entry its own target (its section, its tab, its page), or show fewer entries",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-current",
+    "where": "header.nav",
+    "msg": "the nav stays on screen with 5 links to the page's sections, but never marks the one you are in (no link changes as the page scrolls)",
+    "fix": "mark the link of the section on screen (a colour, a weight or a line under it) as the visitor scrolls",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "action-repeat",
+    "where": "header.nav > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"request a consultation\"",
+    "msg": "\"request a consultation\" shows 2 times on the first screen at 1440px (nav, hero): the nav's button and the hero's; nothing else on the screen may repeat it",
+    "fix": "show the action once a screen besides the nav's button: the hero's, the close's or the phone bar's, never all at once",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav",
+    "where": "header.nav > div.wrap.nav__bar > button.nav__toggle",
+    "msg": "the nav is lopsided: its last item ends 13px inside the content's edge (366px), while its first starts on the other edge",
+    "fix": "start the nav's first item and end its last on the content's two edges",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#fees \"Consultation fees\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#start \"Request a consultation\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#fees / section#vets",
+    "msg": "uneven space at the edge of a band: 97px outside its edge, 365px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#start / footer#contact",
+    "msg": "uneven space at the edge of a band: 97px outside its edge, 340px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "proximity",
+    "where": "section#about > div.wrap.grid > div.frame.frame--photo \"Michael Chae, DVM, MS Residency-trained \"",
+    "msg": "stacked at this width, the visual starts 15px under the text and buttons above it (\"Michael Chae, DVM, MS Residenc\"): it reads glued to them",
+    "fix": "give the stacked split the section's own gap between text and visual (40px or more on a phone)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-set",
+    "where": "section#about > div.wrap.grid > div.frame.frame--photo > img.frame__img \"f186238358.jpg\"",
+    "msg": "10 photographs in more than one look: saturation from 0.23 to 0.57; the odd one out is f186238358.jpg",
+    "fix": "grade the photographs to one look (light, colour, warmth), or replace the odd one out",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-weight",
+    "where": "div.grid > article.tile.span-4:nth-of-type(3) > div.tile__media > img \"f186238348.jpg\"",
+    "msg": "12 photographs are 3x or more wider than drawn on the phone, with no srcset: f186238348.jpg is 1920px (737 KB) for a 342px frame; on a phone it arrives late and its frame shows only its ground until then",
+    "fix": "give each photograph srcset and sizes (a 800px and a 1600px file), or a smaller file: the frame never shows empty",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   }
+  ],
+  "crashed": [],
+  "seconds": {
+   "consistency": 124,
+   "layout": 4
+  }
+ },
+ "open": [
+  {
+   "check": "no-visual",
+   "where": "section#start \"Request a consultation\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#start \"Request a consultation\""
+   ]
+  },
+  {
+   "check": "card-family",
+   "where": "section#fees > div.wrap.grid > div.span-6:nth-of-type(1) \"Consultation fees\"",
+   "msg": "8 cards of one kind (.span-6) set their titles in 2 faces: newsreader (2, like \"Consultation fees\"), hanken grotesk (2, like \"Every written plan inclu\")",
+   "fix": "draw one card part one way: one fill and one title face for every card of a kind (one featured card may differ)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "card-family"
+   ],
+   "wheres": [
+    "section#fees > div.wrap.grid > div.span-6:nth-of-type(1) \"Consultation fees\""
+   ]
+  },
+  {
+   "check": "card-layout",
+   "where": "section#fees",
+   "msg": "one layout (.frame--photo) in 3 sections: section#fees, section#vets, section#about; a card layout at most twice",
+   "fix": "a card layout at most twice on a page: build the other sections another way",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "card-layout"
+   ],
+   "wheres": [
+    "section#fees"
+   ]
+  },
+  {
+   "check": "copy-headings",
+   "where": "div.wrap > div.grid > article.tile.span-4:nth-of-type(1) > h3.t-card \"Skin and ears\"",
+   "msg": "\"Skin and ears\" names no product, part, place or section (6 headings like it; at most one brand line per page) (and 5 more like it: \"Digestion\", \"Weight and senior pets\", \"Have these ready\", \"Do I still need my regul\", ...)",
+   "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "copy-headings"
+   ],
+   "wheres": [
+    "div.wrap > div.grid > article.tile.span-4:nth-of-type(1) > h3.t-card \"Skin and ears\""
+   ]
+  },
+  {
+   "check": "section-gaps",
+   "where": "section#fees / section#vets",
+   "msg": "462px between these sections, +121% against the median 209px of gaps at a change of ground",
+   "fix": "use one gap between sections (all within 25% of each other)",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-gaps"
+   ],
+   "wheres": [
+    "section#fees / section#vets"
+   ]
+  },
+  {
+   "check": "section-gaps",
+   "where": "section#start / footer#contact",
+   "msg": "437px between these sections, +109% against the median 209px of gaps at a change of ground",
+   "fix": "use one gap between sections (all within 25% of each other)",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-gaps"
+   ],
+   "wheres": [
+    "section#start / footer#contact"
+   ]
+  }
+ ],
+ "waived": [],
+ "warnCount": 29,
+ "at": "2026-11-18T21:22:09.727Z",
+ "openTold": true
+}

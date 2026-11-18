@@ -1,0 +1,25 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/backgrounds/backgrounds.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/icons/icon.css">
+<!-- <html lang="en" data-radius="sharp">; keep this <style> after the links: layout.css resets --ly-scale -->
+<style>
+:root {
+  --p-bg: #0a0b0c; --p-surface: #15181a; --p-ink: #ffffff; --p-muted: #9aa3a8;
+  --p-accent: #2fe08b; --p-accent-ink: #0a0b0c; --p-action: #2fe08b; --p-action-ink: #0a0b0c;
+  --p-inv-bg: #ffffff; --p-inv-surface: #ebebeb; --p-inv-ink: #0a0b0c; --p-inv-muted: #5b5b5c;
+  --p-inv-accent: #0a0b0c; --p-inv-accent-ink: #ffffff; --p-inv-action: #0a0b0c; --p-inv-action-ink: #ffffff;
+  --font-display: "Archivo", system-ui, sans-serif;
+  --font-text: "Archivo", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.025em;
+  --display-tracking-xl: -0.035em;
+  --display-stretch: 110%;
+  --ly-scale: 0.9;
+}
+</style>
